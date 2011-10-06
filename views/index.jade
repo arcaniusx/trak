@@ -1,2 +1,32 @@
-h1= title
-p Welcome to #{title}
+div.page
+    header
+        div.logo logo
+        nav
+            - var items = [1,2,3,4,5,6,7]
+            each item, i in items
+                a(class='nav#{i}', href='#') item #{i}
+    section
+        aside
+            img(src='')
+
+        article
+            h1 Content Header
+            div.content
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac leo sagittis ante tristique porta non nec augue. Vivamus blandit, magna et eleifend dictum, enim risus fringilla felis, ac suscipit sem mi ac lectus. Aliquam a sapien mauris, ac malesuada nibh. Sed et congue ligula. Curabitur pretium pretium convallis. Mauris enim nisl, fermentum sit amet blandit vitae, dapibus non lectus. Pellentesque non sem quis lacus lobortis placerat ut et urna. Sed at eros est, eget feugiat nulla. Phasellus felis leo, vulputate id rhoncus ac, aliquet sed leo. Nam cursus hendrerit dapibus. In tristique mollis metus, sed congue ante interdum in. Phasellus a nibh vitae elit sodales volutpat sed id ligula. Cras at massa lacus.
+                    Aliquam tristique hendrerit enim, et placerat justo vehicula quis. Pellentesque purus risus, lobortis vel pretium ut, iaculis ac nulla. Cras fermentum nibh sit amet augue porttitor ullamcorper. Nullam et ligula justo. Nunc vitae mollis velit. Cras sagittis enim lorem. Nunc faucibus bibendum lacus, non ullamcorper velit auctor at.
+                p Morbi in aliquet neque. Ut rutrum mollis metus at porta. Curabitur volutpat ultricies porttitor. Sed porta velit in leo ullamcorper vitae posuere enim iaculis. Phasellus vel libero sit amet odio porttitor tincidunt. Nulla facilisi. Praesent eros nibh, convallis a molestie at, commodo non ipsum. Pellentesque justo nisi, vehicula in pharetra quis, consectetur a est.
+                    Cras consequat felis sit amet tortor pharetra ac vestibulum dui ultrices. Etiam fermentum sodales nunc, cursus facilisis eros porttitor in. Nunc ac metus eget dui pellentesque euismod at sodales purus. Suspendisse potenti. Vivamus quis molestie leo. Nam a leo leo, ullamcorper dignissim ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id nibh massa, eget ullamcorper magna. Aenean faucibus erat vitae erat eleifend aliquam. Integer dignissim sollicitudin sodales. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse tincidunt vulputate mi, vel egestas sem aliquam egestas.
+                p Vestibulum a tincidunt nisl. Suspendisse lacinia urna in dolor ornare non facilisis orci sagittis. Nullam posuere libero ac arcu pretium placerat. Integer dapibus tempus nunc, a pellentesque neque laoreet in. Fusce eros massa, adipiscing sed adipiscing a, lobortis vitae est. Vivamus sit amet arcu leo. Aliquam faucibus, diam quis rhoncus fringilla, nulla metus malesuada dolor, in ultricies sapien tellus convallis velit. Proin vehicula cursus sem, at viverra sem auctor nec. In hac habitasse platea dictumst. Maecenas rutrum sodales augue sed auctor. Mauris ipsum sapien, aliquam sed tincidunt quis, hendrerit id tortor.
+
+
+
+    footer
+
+        - var modules = [1,2,3]
+        each module, m in modules
+            div
+                ul
+                    - var items = [1,2,3,4,5,6,7]
+                    each item, i in items
+                        li
+                            a(href='#') item #{i}

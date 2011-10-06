@@ -1,5 +1,101 @@
+@import 'mixins'
+
 body
-  padding 50px
-  font 14px "Lucida Grande", Helvetica, Arial, sans-serif
-a
-  color #00B7FF
+    color #666
+    font 12px Verdana
+
+.page
+    background #ccc
+    border 1px solid #888
+    border-radius(6px)
+    margin 0 2%
+    padding 10px
+
+    header
+        background #ddd
+        border 1px solid #ddd
+        border-radius(6px)
+        box-shadow(0 0 3px #444)
+        padding-top 100px
+        position relative
+
+        .logo
+            background #bbb
+            border-radius(6px 6px 0 0)
+            bottom 22px
+            left 0
+            position absolute
+            top 0
+            right 0
+
+        nav
+            height 20px
+            line-height 20px
+            list-style inline
+            overflow hidden
+
+            a
+                background #bbb
+                padding 2px 10px
+                margin-right 20px
+
+            a:first-child
+                border-radius(0 0 0 6px)
+
+    section
+        background #ddd
+        border 1px solid #ddd
+        border-radius(4px)
+        box-shadow(0 0 3px #444)
+        margin-top 10px
+        padding 3px
+        overflow auto
+
+        aside
+            background #bbb
+            border-radius(3px 0 0 3px)
+            float left
+            text-align center
+            width 19.5%
+
+            img
+                background #999
+                height 100px
+                margin 10px 10px
+                width 200px
+
+        article
+            background #bbb
+            border-radius(0 3px 3px 0 )
+            float right
+            width 80%
+
+            h1
+                margin 10px
+
+            p
+                margin 10px;
+
+    footer
+        background #ddd
+        border 1px solid #ddd
+        border-radius(4px)
+        box-shadow(0 0 3px #444)
+        margin-top 10px
+        overflow auto
+
+        div
+            background #bbb
+            border-radius(3px 0 0 3px)
+            float left
+            margin-left 1%
+            width 32%
+
+            ul
+                margin 0
+                padding 0
+
+                a
+                    background #aaa
+                    display block
+                    margin 8px
