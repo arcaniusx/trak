@@ -95,11 +95,39 @@ body {
   float: right;
   width: 80%;
 }
-.page section article h1 {
+.page section article h1,
+.page section article h2 {
   margin: 10px;
 }
 .page section article p {
   margin: 10px;
+}
+.page section article table {
+  padding: 0;
+  margin: 10px 1%;
+  width: 98%;
+}
+.page section article table tr {
+  border: 1px solid #000;
+  background: #fff;
+}
+.page section article table tr th {
+  background: #999;
+}
+.page section article table tr td {
+  text-align: center;
+}
+.page section article table tr td td {
+  background: #ddd;
+  border: 1px solid #999;
+}
+.page section article code,
+.page section article pre {
+  background: #fff;
+  border: 1px solid #555;
+  display: block;
+  margin: 10px 1%;
+  padding: 10px;
 }
 .page footer {
   background: #ddd;
