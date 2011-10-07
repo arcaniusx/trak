@@ -1,6 +1,48 @@
 !!!5
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body!= body
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js')
+        script(type='text/javascript')
+            function addEvent(obj, type, fn) {
+                if (obj.attachEvent) {
+                    obj['e' + type + fn] = fn;
+                    obj[type + fn] = function() {
+                        obj['e' + type + fn](window.event );
+                    };
+                    obj.attachEvent('on' + type, obj[type + fn]);
+                } else {
+                    obj.addEventListener(type, fn, false);
+                }
+            }
+
+            $('a').live('click', function() {
+                return false;
+            });
+
+            addEvent(document, 'click', function(e) {
+                var
+                    tree = [],
+                    parent = e.srcElement.parentNode || null,
+                    timestamp = new Date().getTime();
+
+                e.pageX = e.pageX || e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                e.pageY = e.pageY || e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+
+                while (parent && parent.nodeName !== '#document') {
+                    tree.push(parent.nodeName);
+                    parent = parent.parentNode;
+                }
+
+                $('<li/>').html([e.pageX, e.pageY, e.srcElement.nodeName, tree.join('/'), timestamp].join('-')).prependTo('.debug ul');
+
+                $('<div class="click"></div>').css({
+                    left: e.pageX,
+                    top: e.pageY
+                }).appendTo('body');
+            });
+    body!= body
